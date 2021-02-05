@@ -1,0 +1,34 @@
+<div ng-controller="PrikazCtrl">
+
+<div>
+<table class="table">
+	<thead>
+		<tr>
+		<th>Datum otvaranja</th>
+		<th>Datum izmene</th>
+		<th>broj dokumenta</th>
+		<th>Tip Dokumenta</th>
+		<th>Maticni broj</th>
+		<th>PIB</th>
+		<th>Iznos bez PDV</th>
+		<th>PDV</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in dokumenti">
+		<td>{{x.created}}</td>
+		<td>{{x.modified}}</td>
+		<td>{{x.brojDokumenta}}</td>
+		<td>{{x.tipDokumenta}}</td>
+		<td>{{x.maticniBroj}}</td>
+		<td>{{x.pib}}</td>
+		<td>{{x.iznosBezPdv}}</td>
+		<td>{{x.pdv}}</td>
+		
+		<td><button ng-click="goToIzmena(x.id)">Izmeni</button>
+		<button ng-click="potvrdiBrisanje(x.id)">Obrisi</button>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>

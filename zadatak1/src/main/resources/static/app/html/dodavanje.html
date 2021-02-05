@@ -1,0 +1,42 @@
+<div ng-controller="DodavanjeCtrl">
+<div class="row">
+<form>
+	<div class="form-group"">
+	<label>Broj dokumenta</label>
+	<input class="form-control" ng-model="novi.brojDokumenta">
+	</div>
+	
+	<div class="form-group">
+	<label>Tip dokumenta</label>
+	<select class="form-control" ng-model="novi.tipDokumenta">
+		<option value="PRIJEMNICA"> PRIJEMNICA</option>
+		<option value="OTPREMNICA"> OTPREMNICA</option>
+		<option value="NALOG"> NALOG</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+	 <label>Maticni broj</label>
+	 <input class="form-control" ng-model="novi.maticniBroj">
+	</div>
+	
+	<div class="form-group">
+	 <label>Pib</label>
+	 <input class="form-control" ng-model="novi.pib">
+	</div>
+
+	<div class="form-group">
+	 <label>Iznos bez PDV-a</label>
+	 <input class="form-control" ng-model="novi.iznosBezPdv">
+	</div>
+
+	<div class="form-group">
+		<label>PDV (%)</label>
+		<input class="form-control" ng-model="novi.pdv">
+	   </div>
+
+	<button class="btn btn-primary" ng-click="dodaj()">Dodaj</button>
+	
+</form>
+</div>
+</div>
